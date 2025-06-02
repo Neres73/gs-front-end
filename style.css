@@ -34,3 +34,19 @@ nav ul li {
 nav ul li a:hover {
     color: #FFA07A; /* Cor de Destaque (10%) para links ao passar o mouse */
 }
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    background-color: #FFFFFF; /* Cor Secundária (30%): Branco para as seções de conteúdo */
+    border-bottom: 1px solid #D3D3D3; /* Borda cinza clara */
+    text-align: center;
+}
+.hero-section {
+    background-color: #ADD8E6; /* Mesma cor do header para a hero */
+    padding: 60px 0;
+    color: #333;
+}
