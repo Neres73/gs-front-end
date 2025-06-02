@@ -32,7 +32,7 @@ nav ul li {
     margin: 0 15px;
 }
 nav ul li a:hover {
-    color: #FFA07A; /* Cor de Destaque (10%) para links ao passar o mouse */
+    color: #FFA07A; 
 }
 .logo {
     font-size: 2em;
@@ -41,12 +41,12 @@ nav ul li a:hover {
 section {
     padding: 40px 0;
     margin-bottom: 20px;
-    background-color: #FFFFFF; /* Cor Secundária (30%): Branco para as seções de conteúdo */
-    border-bottom: 1px solid #D3D3D3; /* Borda cinza clara */
+    background-color: #FFFFFF; 
+    border-bottom: 1px solid #D3D3D3; 
     text-align: center;
 }
 .hero-section {
-    background-color: #ADD8E6; /* Mesma cor do header para a hero */
+    background-color: #ADD8E6; 
     padding: 60px 0;
     color: #333;
 }
@@ -59,7 +59,7 @@ h3 {
     font-size: 1.5em;
     margin-top: 30px;
     margin-bottom: 15px;
-    color: #FFA07A; /* Cor de Destaque (10%) para subtítulos */
+    color: #FFA07A; 
 }
 p {
     margin-bottom: 15px;
