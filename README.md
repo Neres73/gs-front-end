@@ -52,3 +52,29 @@ A estilização deste modelo adota a Regra 60-30-10 de design de cores para gara
 - Navegação Básica: Um menu simples e funcional.
 - Seções de Conteúdo: Blocos bem definidos para organizar as informações da página.
 - Centralização de Conteúdo: Utiliza um contêiner central para manter o conteúdo legível em telas largas.
+
+---
+
+## ⚠️ Importante: Sobre "Enchentes" neste Projeto
+
+É fundamental esclarecer que este projeto, o **"Modelo de Website Estático Básico"**, é uma demonstração de estrutura e estilização Front-End (HTML/CSS) com foco em responsividade e design de cores.
+
+### O que este código **NÃO** faz:
+
+- **Não aborda diretamente problemas de enchentes:** Este repositório *não* contém conteúdo informativo, soluções, alertas, mapas de risco ou qualquer funcionalidade específica relacionada a enchentes.
+- **Não oferece funcionalidades de emergência:** Não há scripts ou integrações que forneçam dados em tempo real, previsões ou orientações diretas sobre situações de enchente.
+- **Não é um "Guia de Enchentes" funcional:** Embora a paleta de cores tenha sido inspirada em um possível tema de "Guia de Enchentes" para ilustrar a aplicação da Regra 60-30-10 em um contexto específico, o código base fornecido é puramente estrutural e estético.
+
+### Como um tema de "Enchentes" seria implementado (próximos passos):
+
+Para transformar este modelo em um "Guia de Enchentes" real, seriam necessários os seguintes acréscimos:
+
+- **Conteúdo HTML:** Adicionar textos, imagens, vídeos e gráficos que expliquem causas, prevenção, o que fazer antes, durante e depois de uma enchente.
+- **Funcionalidades JavaScript:** Implementar recursos interativos como:
+    - Mapas interativos de áreas de risco.
+    - Formulários para denúncias ou pedidos de ajuda.
+    - Integração com APIs de dados meteorológicos para alertas em tempo real.
+    - Galerias de imagens ou vídeos educacionais.
+- **Estilização Específica:** Ajustar o CSS para elementos visuais que deem mais clareza a informações críticas (ex: cores de alerta para botões, ícones específicos).
+
+Este projeto serve como uma base sólida para **iniciar** um website com qualquer tema, incluindo um "Guia de Enchentes", mas o conteúdo e a lógica específica do tema precisam ser desenvolvidos separadamente.
