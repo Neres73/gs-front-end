@@ -28,3 +28,9 @@ nav ul {
     justify-content: center;
     margin-top: 10px;
 }
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a:hover {
+    color: #FFA07A; /* Cor de Destaque (10%) para links ao passar o mouse */
+}
