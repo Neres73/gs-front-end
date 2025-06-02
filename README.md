@@ -26,7 +26,7 @@ O principal objetivo é criar uma Landing Page completa que permita aplicar todo
 * **Criar um site responsivo e funcional**.
 * **Implementar um guia detalhado** sobre ações a serem tomadas antes, durante e depois de uma enchente.
 * **Apresentar informações sobre sinais ambientais ou visuais** que podem indicar risco crescente de enchente.
-* **Praticar habilidades de desenvolvimento** com HTML, CSS e JavaScript.
+* **Praticar habilidades de desenvolvimento** com HTML e CSS
 * **Utilizar versionamento de código** com GitHub.
 
 ---
@@ -49,16 +49,13 @@ O site oferece as seguintes funcionalidades principais:
 * **Identificação de Locais de Risco:** Exibir uma seção com a descrição dos principais locais de risco de enchente em áreas relevantes, incluindo características que os tornam vulneráveis.
 * **Sinais de Alerta de Enchente:** Fornecer informações sobre os sinais ambientais ou visuais que podem indicar um risco crescente de enchente.
 * **Guias de Ação Completos:** Dispor de um guia detalhado sobre as ações a serem tomadas antes, durante e depois de uma enchente (ex: kit de emergência, proteção de bens, como agir com segurança, recuperação).
-* **Links Úteis e Contatos de Emergência:** Listar lugares considerados seguros na região (pontos altos, edifícios públicos) e a localização de abrigos temporários designados, além de exibir uma lista de contatos de emergência (Bombeiros, Defesa Civil, SAMU) de forma proeminente.
-* **Calendário de Épocas de Chuva:** Apresentar um calendário ou tabela indicando os períodos do ano com maior probabilidade de chuvas intensas e enchentes por região.
-* **Visualização de Imagem, Nome, Preço e Status (Disponível/Indisponível):** (Esta funcionalidade parece ser do README anterior de "Catálogo de Produtos" e pode não se aplicar diretamente aqui. Irei mantê-la se desejar, mas é mais coerente com um e-commerce. Para um guia de enchentes, talvez se refira à visualização de imagens ilustrativas ou mapas.)
 * **Layout simples, intuitivo e responsivo**.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **FrontEnd:** HTML, CSS, JavaScript.
+* **FrontEnd:** HTML, CSS.
 * **CSS:** Para toda a estilização, incluindo layout, tipografia, cores e responsividade.
 
 ---
