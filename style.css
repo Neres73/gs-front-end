@@ -50,3 +50,20 @@ section {
     padding: 60px 0;
     color: #333;
 }
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+h3 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #FFA07A; /* Cor de Destaque (10%) para subtítulos */
+}
+p {
+    margin-bottom: 15px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
