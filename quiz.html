@@ -3,50 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia de Enchentes - Quiz</title>
+    <title>Quiz Básico</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="quiz.css"> </head>
+</head>
 <body>
     <header>
         <nav>
             <div class="logo">Guia de Enchentes</div>
-            <button class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="nav-links">
+            <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="areas_de_risco.html">Áreas de Risco</a></li>
-                <li><a href="sinais_de_alerta.html">Sinais de Alerta</a></li>
-                <li><a href="acoes_de_emergencia.html">Ações de Emergência</a></li>
-                <li><a href="contatos_de_emergencia.html">Contatos</a></li>
-                <li><a href="quiz.html">Quiz</a></li>
-            </ul>
+                </ul>
         </nav>
     </header>
 
     <main>
-        <section id="quiz" class="content-section">
+        <section id="quiz-section">
             <div class="container">
                 <h2>Teste seus Conhecimentos sobre Enchentes!</h2>
-                <p>Responda às 10 perguntas abaixo para verificar o quanto você sabe sobre como se preparar e agir em caso de enchentes.</p>
 
-                <div id="quiz-container">
-                    <div id="question-area">
-                        <p id="question-text"></p>
-                        <div id="options-container">
-                            </div>
-                    </div>
-                    <button id="next-button">Próxima Pergunta</button>
-                    <button id="restart-quiz-button" style="display: none;">Refazer Quiz</button>
+                <div id="quiz-area">
+                    <p id="question-text">Pergunta vai aqui?</p>
+                    <div id="answer-buttons">
+                        </div>
+                    <button id="next-button">Próxima</button>
                 </div>
 
-                <div id="result-area" style="display: none;">
-                    <h3>Resultado do Quiz</h3>
-                    <p id="score-text"></p>
-                    <button id="retake-quiz-button">Refazer Quiz</button>
-                    <button id="back-to-home-button">Voltar ao Início</button>
+                <div id="final-score" style="display: none;">
+                    <h3>Resultado Final</h3>
+                    <p id="score-text">Você acertou X de Y perguntas.</p>
+                    <button id="restart-button">Refazer Quiz</button>
                 </div>
             </div>
         </section>
@@ -58,5 +43,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script> <script src="quiz.js"></script>   </body>
+    <script src="script.js"></script>
+</body>
 </html>

@@ -16,10 +16,11 @@ body {
     padding: 20px;
 }
 header {
-    background-color: #ADD8E6; 
-    color: #333; 
+    background-color: #ADD8E6;
+    color: #333;
     padding: 15px 0;
     text-align: center;
+    position: relative; 
 }
 nav ul {
     list-style: none;
@@ -32,7 +33,7 @@ nav ul li {
     margin: 0 15px;
 }
 nav ul li a:hover {
-    color: #FFA07A; 
+    color: #FFA07A;
 }
 .logo {
     font-size: 2em;
@@ -41,12 +42,12 @@ nav ul li a:hover {
 section {
     padding: 40px 0;
     margin-bottom: 20px;
-    background-color: #FFFFFF; 
-    border-bottom: 1px solid #D3D3D3; 
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D3D3D3;
     text-align: center;
 }
 .hero-section {
-    background-color: #ADD8E6; 
+    background-color: #ADD8E6;
     padding: 60px 0;
     color: #333;
 }
@@ -59,7 +60,7 @@ h3 {
     font-size: 1.5em;
     margin-top: 30px;
     margin-bottom: 15px;
-    color: #FFA07A; 
+    color: #FFA07A;
 }
 p {
     margin-bottom: 15px;
@@ -90,39 +91,15 @@ section img {
     margin-left: auto;
     margin-right: auto;
 }
-section img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 30px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 footer {
-    background-color: #ADD8E6; 
-    color: #333; 
+    background-color: #ADD8E6;
+    color: #333;
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
 }
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
-    h2 {
-        font-size: 1.8em;
-    }
-    h3 {
-        font-size: 1.3em;
-    }
-    section {
-        padding: 30px 0;
-    }
-}
+
+
 form {
     background-color: #FFFFFF;
     padding: 30px;
@@ -210,22 +187,6 @@ button[type="submit"]:active {
     background-color: #FF7043;
 }
 
-@media (max-width: 768px) {
-    form {
-        padding: 20px;
-        margin: 20px auto;
-    }
-
-    .form-group label {
-        font-size: 1em;
-    }
-
-    button[type="submit"] {
-        width: 100%;
-        font-size: 1em;
-        padding: 12px 20px;
-    }
-}
 
 
 .hamburger {
@@ -250,13 +211,32 @@ button[type="submit"]:active {
     transition: all 0.3s ease;
 }
 
+
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
+    nav ul { 
+        display: none; 
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    h3 {
+        font-size: 1.3em;
+    }
+    section {
+        padding: 30px 0;
     }
 
-    nav ul.nav-links {
-        display: none;
+    .hamburger {
+        display: block; 
+    }
+
+    nav ul.nav-links.active { 
+        display: flex;
         flex-direction: column;
         width: 100%;
         background-color: #ADD8E6;
@@ -266,10 +246,6 @@ button[type="submit"]:active {
         padding: 20px 0;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         z-index: 999;
-    }
-
-    nav ul.nav-links.active {
-        display: flex;
     }
 
     nav ul.nav-links li {
@@ -287,5 +263,158 @@ button[type="submit"]:active {
     nav ul.nav-links li a:hover {
         background-color: #E0F2F7;
         color: #FFA07A;
+    }
+
+    
+    #quiz-container, #result-area {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    #question-text {
+        font-size: 1.3em;
+    }
+
+    #options-container {
+        grid-template-columns: 1fr;
+    }
+
+    .option-button {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+
+    #next-button, #restart-quiz-button, #retake-quiz-button, #back-to-home-button {
+        font-size: 1em;
+        padding: 12px 20px;
+        width: 100%; 
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #score-text {
+        font-size: 1.5em;
+    }
+}
+
+
+
+#quiz-section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D3D3D3;
+    text-align: center;
+}
+
+#quiz-area {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #E0F2F7;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#question-text {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+#answer-buttons {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px; 
+    margin-bottom: 25px;
+}
+
+.btn {
+    background-color: #ADD8E6;
+    color: #333;
+    padding: 12px 20px;
+    border: 1px solid #87CEEB;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover:not(.correct):not(.incorrect) {
+    background-color: #A0D0E0;
+    transform: translateY(-1px);
+}
+
+.btn.correct {
+    background-color: #A8D8AD; 
+    border-color: #6CAF7B;
+    color: #333;
+    pointer-events: none; 
+}
+
+.btn.incorrect {
+    background-color: #FFB3B3; 
+    border-color: #E06666;
+    color: #333;
+    pointer-events: none; 
+}
+
+#next-button, #restart-button {
+    background-color: #FFA07A;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#next-button:hover, #restart-button:hover {
+    background-color: #FF8C66;
+    transform: translateY(-2px);
+}
+
+#final-score {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#final-score h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#score-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #FFA07A;
+    margin-bottom: 25px;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    #quiz-area, #final-score {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    #question-text {
+        font-size: 1.2em;
+    }
+    .btn, #next-button, #restart-button {
+        font-size: 0.95em;
+        padding: 10px 15px;
+    }
+    #score-text {
+        font-size: 1.5em;
     }
 }
