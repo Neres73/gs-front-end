@@ -418,3 +418,54 @@ button[type="submit"]:active {
         font-size: 1.5em;
     }
 }
+.color-switcher {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+    align-items: center;
+}
+
+.color-icon {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #777;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.color-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+body.bg-blue {
+    background-color: #E0F2F7;
+}
+
+body.bg-green {
+    background-color: #D4EDDA;
+}
+
+body.bg-pink {
+    background-color: #F8D7DA;
+}
+
+body.bg-default {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .color-switcher {
+        position: static;
+        margin-top: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
