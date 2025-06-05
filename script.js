@@ -156,7 +156,7 @@ function selectAnswer(e) {
     } else {
         selectedBtn.classList.add("incorrect");
     }
-    // Desabilita todos os botões após a seleção
+    
     Array.from(answerButtons.children).forEach(button => {
         if (button.dataset.correct === "true") {
             button.classList.add("correct"); 
@@ -200,34 +200,42 @@ document.getElementById("back-to-home-button").addEventListener("click", () => {
 
 startQuiz();
 
-const blueButton = document.getElementById('color-blue-button');
-const greenButton = document.getElementById('color-green-button');
-const pinkButton = document.getElementById('color-pink-button');
-const body = document.body;
 
-if (blueButton && greenButton && pinkButton) {
-    function setBackgroundColor(colorClass) {
-        body.classList.remove('bg-blue', 'bg-green', 'bg-pink');
-        body.classList.add(colorClass);
-        localStorage.setItem('backgroundColor', colorClass);
-    }
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-    if (blueButton) {
-        blueButton.addEventListener('click', () => setBackgroundColor('bg-blue'));
-    }
-    if (greenButton) {
-        greenButton.addEventListener('click', () => setBackgroundColor('bg-green'));
-    }
-    if (pinkButton) {
-        pinkButton.addEventListener('click', () => setBackgroundColor('bg-pink'));
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const savedColor = localStorage.getItem('backgroundColor');
-        if (savedColor && ['bg-blue', 'bg-green', 'bg-pink'].includes(savedColor)) {
-            body.classList.add(savedColor);
-        } else {
-            body.classList.add('bg-blue');
-        }
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
     });
 }
+
+const simpleImages = document.querySelectorAll('#slideshow-container-simples .slideshow-image-simples');
+const simpleNextButton = document.getElementById('next-button-simples');
+
+let simpleCurrentIndex = 0;
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (simpleImages.length > 0) {
+        simpleImages[simpleCurrentIndex].classList.add('active');
+    }
+
+    if (simpleNextButton) {
+        simpleNextButton.addEventListener('click', () => {
+            simpleImages[simpleCurrentIndex].classList.remove('active');
+
+            simpleCurrentIndex++;
+
+            if (simpleCurrentIndex >= simpleImages.length) {
+                simpleCurrentIndex = simpleImages.length - 1;
+                simpleNextButton.style.display = 'none';
+            }
+
+            if (simpleCurrentIndex < simpleImages.length) {
+                simpleImages[simpleCurrentIndex].classList.add('active');
+            }
+        });
+    }
+});
+
+
