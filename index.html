@@ -6,33 +6,26 @@
     <title>Guia de Enchentes - Início</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>                    
-  <header>
-    <nav>
-        <div class="logo">Guia de Enchentes</div>
-        <button class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Guia de Enchentes</div>
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="areas_de_risco.html">Áreas de Risco</a></li>
-            <li><a href="sinais_de_alerta.html">Sinais de Alerta</a></li>
-            <li><a href="acoes_de_emergencia.html">Ações de Emergência</a></li>
-            <li><a href="contatos_de_emergencia.html">Contatos</a></li>
-            <li><a href="quiz.html">Quiz</a></li> </ul>
-            
-        </ul>
-        <div class="color-switcher">
-            <button id="color-blue-button" class="color-icon" style="background-color: #E0F2F7;"></button>
-            <button id="color-green-button" class="color-icon" style="background-color: #D4EDDA;"></button>
-            <button id="color-pink-button" class="color-icon" style="background-color: #F8D7DA;"></button>
-         </div>
-    </nav>
-  </header>
-    
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="areas_de_risco.html">Áreas de Risco</a></li>
+                <li><a href="sinais_de_alerta.html">Sinais de Alerta</a></li>
+                <li><a href="acoes_de_emergencia.html">Ações de Emergência</a></li>
+                <li><a href="contatos_de_emergencia.html">Contatos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section id="problema" class="hero-section">
@@ -42,11 +35,11 @@
                 <p>Essa falta de preparo e informação adequada resulta em insegurança, perdas financeiras e um grande impacto na qualidade de vida.</p>
                 <img src="img/enchente.jpg" alt="imagem ilustrativa de enchente">
             </div>
+        </section>
         <section id="solucao" class="content-section">
             <div class="container">
                 <h2>Nossa Solução: Informação para sua Segurança</h2>
                 <p>Nosso guia visa capacitar os usuários com informações precisas e em tempo real sobre riscos de enchente, aumentando a segurança da população e mitigando perdas materiais.</p>
-                
                 <img src="img/solucao.jpeg" alt="imagem ilsutrativa da solução">
             </div>
         </section>
@@ -63,9 +56,23 @@
                 <img src="img/beneficios.jpg" alt="imagem ilustrativa dos beneficios">
             </div>
         </section>
+
+        <section id="galeria-fotos" class="content-section">
+            <div class="container">
+                <h2>Galeria de Fotos</h2>
+                <div id="slideshow-container-manual">
+                    <img src="img/enchenteslide.jpg" class="slideshow-image-manual">
+                    <img src="img/risco.jpg" class="slideshow-image-manual">
+                    <img src="img/emergencia.jpg" class="slideshow-image-manual">
+                </div>
+                <button id="prev-button-manual">Imagem Anterior</button>
+                <button id="next-button-manual">Próxima Imagem</button>
+            </div>
+        </section>
         <section>
             <div>
-                <form action="#" method="POST"> <div class="form-group">
+                <form action="#" method="POST">
+                    <div class="form-group">
                         <label for="contact_nome">Nome:</label>
                         <input type="text" id="contact_nome" name="nome" required>
                     </div>
@@ -95,8 +102,9 @@
                 </form>
             </div>
         </section>
+
     </main>
-     <footer>
+    <footer>
         <div class="container">
             <p> 2025 Guia de Enchentes.</p>
         </div>

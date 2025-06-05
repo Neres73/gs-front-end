@@ -10,18 +10,21 @@ body {
     color: #333;
     background-color: #E0F2F7;
 }
+
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
 }
+
 header {
     background-color: #ADD8E6;
     color: #333;
     padding: 15px 0;
     text-align: center;
-    position: relative; 
+    position: relative;
 }
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -29,16 +32,20 @@ nav ul {
     justify-content: center;
     margin-top: 10px;
 }
+
 nav ul li {
     margin: 0 15px;
 }
+
 nav ul li a:hover {
     color: #FFA07A;
 }
+
 .logo {
     font-size: 2em;
     font-weight: bold;
 }
+
 section {
     padding: 40px 0;
     margin-bottom: 20px;
@@ -46,28 +53,33 @@ section {
     border-bottom: 1px solid #D3D3D3;
     text-align: center;
 }
+
 .hero-section {
     background-color: #ADD8E6;
     padding: 60px 0;
     color: #333;
 }
+
 h2 {
     font-size: 2.2em;
     margin-bottom: 20px;
     color: #333;
 }
+
 h3 {
     font-size: 1.5em;
     margin-top: 30px;
     margin-bottom: 15px;
     color: #FFA07A;
 }
+
 p {
     margin-bottom: 15px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
+
 ul {
     list-style: disc;
     max-width: 700px;
@@ -75,14 +87,17 @@ ul {
     text-align: left;
     padding-left: 20px;
 }
+
 ul li {
     margin-bottom: 8px;
 }
+
 .small-text {
     font-size: 0.9em;
     color: #666;
     margin-top: 10px;
 }
+
 section img {
     max-width: 100%;
     height: auto;
@@ -91,6 +106,7 @@ section img {
     margin-left: auto;
     margin-right: auto;
 }
+
 footer {
     background-color: #ADD8E6;
     color: #333;
@@ -98,7 +114,6 @@ footer {
     padding: 20px 0;
     margin-top: 40px;
 }
-
 
 form {
     background-color: #FFFFFF;
@@ -187,8 +202,6 @@ button[type="submit"]:active {
     background-color: #FF7043;
 }
 
-
-
 .hamburger {
     display: none;
     background: none;
@@ -211,10 +224,9 @@ button[type="submit"]:active {
     transition: all 0.3s ease;
 }
 
-
 @media (max-width: 768px) {
-    nav ul { 
-        display: none; 
+    nav ul {
+        display: none;
         flex-direction: column;
         margin-top: 20px;
     }
@@ -230,12 +242,10 @@ button[type="submit"]:active {
     section {
         padding: 30px 0;
     }
-
     .hamburger {
-        display: block; 
+        display: block;
     }
-
-    nav ul.nav-links.active { 
+    nav ul.nav-links.active {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -247,57 +257,45 @@ button[type="submit"]:active {
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         z-index: 999;
     }
-
     nav ul.nav-links li {
         margin: 10px 0;
         text-align: center;
     }
-
     nav ul.nav-links li a {
         display: block;
         padding: 10px;
         color: #333;
         text-decoration: none;
     }
-
     nav ul.nav-links li a:hover {
         background-color: #E0F2F7;
         color: #FFA07A;
     }
-
-    
     #quiz-container, #result-area {
         padding: 20px;
         margin: 20px auto;
     }
-
     #question-text {
         font-size: 1.3em;
     }
-
     #options-container {
         grid-template-columns: 1fr;
     }
-
     .option-button {
         font-size: 1em;
         padding: 12px 15px;
     }
-
     #next-button, #restart-quiz-button, #retake-quiz-button, #back-to-home-button {
         font-size: 1em;
         padding: 12px 20px;
-        width: 100%; 
+        width: 100%;
         margin-left: 0;
         margin-right: 0;
     }
-
     #score-text {
         font-size: 1.5em;
     }
 }
-
-
 
 #quiz-section {
     padding: 40px 0;
@@ -325,8 +323,8 @@ button[type="submit"]:active {
 
 #answer-buttons {
     display: grid;
-    grid-template-columns: 1fr; 
-    gap: 15px; 
+    grid-template-columns: 1fr;
+    gap: 15px;
     margin-bottom: 25px;
 }
 
@@ -347,17 +345,17 @@ button[type="submit"]:active {
 }
 
 .btn.correct {
-    background-color: #A8D8AD; 
+    background-color: #A8D8AD;
     border-color: #6CAF7B;
     color: #333;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 .btn.incorrect {
-    background-color: #FFB3B3; 
+    background-color: #FFB3B3;
     border-color: #E06666;
     color: #333;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 #next-button, #restart-button {
@@ -401,7 +399,6 @@ button[type="submit"]:active {
     margin-bottom: 25px;
 }
 
-/* Responsividade básica */
 @media (max-width: 768px) {
     #quiz-area, #final-score {
         padding: 15px;
@@ -418,50 +415,45 @@ button[type="submit"]:active {
         font-size: 1.5em;
     }
 }
-.color-switcher {
-    display: flex;
-    gap: 10px;
-    margin-left: auto;
-    align-items: center;
+
+#slideshow-container-manual {
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
 }
 
-.color-icon {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #777;
-    border-radius: 50%;
+.slideshow-image-manual {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slideshow-image-manual.active {
+    display: block;
+    opacity: 1;
+}
+
+#prev-button-manual,
+#next-button-manual {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    padding: 0;
-    flex-shrink: 0;
+    background-color: #ADD8E6;
+    border: 1px solid #777;
+    border-radius: 5px;
 }
 
-.color-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-body.bg-blue {
-    background-color: #E0F2F7;
-}
-
-body.bg-green {
-    background-color: #D4EDDA;
-}
-
-body.bg-pink {
-    background-color: #F8D7DA;
-}
-
-@media (max-width: 768px) {
-    .color-switcher {
-        position: static;
-        margin-top: 15px;
-        justify-content: center;
-        width: 100%;
-    }
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
+#prev-button-manual:hover,
+#next-button-manual:hover {
+    background-color: #c9e9f2;
 }
