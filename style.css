@@ -16,10 +16,11 @@ body {
     padding: 20px;
 }
 header {
-    background-color: #ADD8E6; 
-    color: #333; 
+    background-color: #ADD8E6;
+    color: #333;
     padding: 15px 0;
     text-align: center;
+    position: relative; 
 }
 nav ul {
     list-style: none;
@@ -32,7 +33,7 @@ nav ul li {
     margin: 0 15px;
 }
 nav ul li a:hover {
-    color: #FFA07A; 
+    color: #FFA07A;
 }
 .logo {
     font-size: 2em;
@@ -41,12 +42,12 @@ nav ul li a:hover {
 section {
     padding: 40px 0;
     margin-bottom: 20px;
-    background-color: #FFFFFF; 
-    border-bottom: 1px solid #D3D3D3; 
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D3D3D3;
     text-align: center;
 }
 .hero-section {
-    background-color: #ADD8E6; 
+    background-color: #ADD8E6;
     padding: 60px 0;
     color: #333;
 }
@@ -59,7 +60,7 @@ h3 {
     font-size: 1.5em;
     margin-top: 30px;
     margin-bottom: 15px;
-    color: #FFA07A; 
+    color: #FFA07A;
 }
 p {
     margin-bottom: 15px;
@@ -90,23 +91,130 @@ section img {
     margin-left: auto;
     margin-right: auto;
 }
-section img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 30px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 footer {
-    background-color: #ADD8E6; 
-    color: #333; 
+    background-color: #ADD8E6;
+    color: #333;
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
 }
+
+
+form {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    margin: 40px auto;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #444;
+    font-size: 1.05em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #D3D3D3;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group textarea:focus {
+    border-color: #FFA07A;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 160, 122, 0.6);
+}
+
+.form-group small {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+    display: block;
+}
+
+button[type="submit"] {
+    background-color: #FFA07A;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.15em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    letter-spacing: 0.5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #FF8C66;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #FF7043;
+}
+
+
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+
 @media (max-width: 768px) {
-    nav ul {
+    nav ul { 
+        display: none; 
         flex-direction: column;
         margin-top: 20px;
     }
@@ -121,5 +229,239 @@ footer {
     }
     section {
         padding: 30px 0;
+    }
+
+    .hamburger {
+        display: block; 
+    }
+
+    nav ul.nav-links.active { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ADD8E6;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+
+    nav ul.nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul.nav-links li a {
+        display: block;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    nav ul.nav-links li a:hover {
+        background-color: #E0F2F7;
+        color: #FFA07A;
+    }
+
+    
+    #quiz-container, #result-area {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    #question-text {
+        font-size: 1.3em;
+    }
+
+    #options-container {
+        grid-template-columns: 1fr;
+    }
+
+    .option-button {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+
+    #next-button, #restart-quiz-button, #retake-quiz-button, #back-to-home-button {
+        font-size: 1em;
+        padding: 12px 20px;
+        width: 100%; 
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #score-text {
+        font-size: 1.5em;
+    }
+}
+
+
+
+#quiz-section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D3D3D3;
+    text-align: center;
+}
+
+#quiz-area {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #E0F2F7;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#question-text {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+#answer-buttons {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px; 
+    margin-bottom: 25px;
+}
+
+.btn {
+    background-color: #ADD8E6;
+    color: #333;
+    padding: 12px 20px;
+    border: 1px solid #87CEEB;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover:not(.correct):not(.incorrect) {
+    background-color: #A0D0E0;
+    transform: translateY(-1px);
+}
+
+.btn.correct {
+    background-color: #A8D8AD; 
+    border-color: #6CAF7B;
+    color: #333;
+    pointer-events: none; 
+}
+
+.btn.incorrect {
+    background-color: #FFB3B3; 
+    border-color: #E06666;
+    color: #333;
+    pointer-events: none; 
+}
+
+#next-button, #restart-button {
+    background-color: #FFA07A;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#next-button:hover, #restart-button:hover {
+    background-color: #FF8C66;
+    transform: translateY(-2px);
+}
+
+#final-score {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#final-score h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#score-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #FFA07A;
+    margin-bottom: 25px;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    #quiz-area, #final-score {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    #question-text {
+        font-size: 1.2em;
+    }
+    .btn, #next-button, #restart-button {
+        font-size: 0.95em;
+        padding: 10px 15px;
+    }
+    #score-text {
+        font-size: 1.5em;
+    }
+}
+.color-switcher {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+    align-items: center;
+}
+
+.color-icon {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #777;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.color-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+body.bg-blue {
+    background-color: #E0F2F7;
+}
+
+body.bg-green {
+    background-color: #D4EDDA;
+}
+
+body.bg-pink {
+    background-color: #F8D7DA;
+}
+
+@media (max-width: 768px) {
+    .color-switcher {
+        position: static;
+        margin-top: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
     }
 }
