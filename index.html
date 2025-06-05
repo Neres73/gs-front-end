@@ -49,6 +49,38 @@
                 <img src="img/beneficios.jpg" alt="imagem ilustrativa dos beneficios">
             </div>
         </section>
+        <section>
+            <div>
+                <form action="#" method="POST"> <div class="form-group">
+                        <label for="contact_nome">Nome:</label>
+                        <input type="text" id="contact_nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact_endereco">Endereço:</label>
+                        <input type="text" id="contact_endereco" name="endereco" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact_telefone">Telefone:</label>
+                        <input type="tel" id="contact_telefone" name="telefone" pattern="[0-9]{10,11}" placeholder="Ex: 11987654321" required>
+                        <small>Formato: XXyyyyyyyyy (10 ou 11 dígitos, ex: 11987654321)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact_email">E-mail (Opcional):</label>
+                        <input type="email" id="contact_email" name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact_mensagem">Mensagem:</label>
+                        <textarea id="contact_mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
     </main>
      <footer>
         <div class="container">
