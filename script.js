@@ -199,3 +199,35 @@ document.getElementById("back-to-home-button").addEventListener("click", () => {
 
 
 startQuiz();
+
+const blueButton = document.getElementById('color-blue-button');
+const greenButton = document.getElementById('color-green-button');
+const pinkButton = document.getElementById('color-pink-button');
+const body = document.body;
+
+if (blueButton && greenButton && pinkButton) {
+    function setBackgroundColor(colorClass) {
+        body.classList.remove('bg-blue', 'bg-green', 'bg-pink');
+        body.classList.add(colorClass);
+        localStorage.setItem('backgroundColor', colorClass);
+    }
+
+    if (blueButton) {
+        blueButton.addEventListener('click', () => setBackgroundColor('bg-blue'));
+    }
+    if (greenButton) {
+        greenButton.addEventListener('click', () => setBackgroundColor('bg-green'));
+    }
+    if (pinkButton) {
+        pinkButton.addEventListener('click', () => setBackgroundColor('bg-pink'));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedColor = localStorage.getItem('backgroundColor');
+        if (savedColor && ['bg-blue', 'bg-green', 'bg-pink'].includes(savedColor)) {
+            body.classList.add(savedColor);
+        } else {
+            body.classList.add('bg-blue');
+        }
+    });
+}

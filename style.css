@@ -453,10 +453,6 @@ body.bg-pink {
     background-color: #F8D7DA;
 }
 
-body.bg-default {
-    background-color: #f0f0f0;
-}
-
 @media (max-width: 768px) {
     .color-switcher {
         position: static;
