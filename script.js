@@ -244,4 +244,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
+    const colorChangerButtons = document.querySelectorAll('.color-changer-btn');
+    const body = document.body;
+
+    colorChangerButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const color = button.dataset.color;
+            body.style.backgroundColor = color;
+        });
+    });
 });
