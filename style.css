@@ -457,3 +457,31 @@ button[type="submit"]:active {
 #next-button-manual:hover {
     background-color: #c9e9f2;
 }
+
+
+
+.color-changer-btn {
+    background-color: #ADD8E6; 
+    color: #333;
+    padding: 8px 15px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin: 0 5px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.color-changer-btn:hover {
+    background-color: #c9e9f2;
+    transform: translateY(-1px);
+}
+
+
+@media (max-width: 768px) {
+    nav ul.nav-links li .color-changer-btn {
+        display: block; 
+        width: fit-content; 
+        margin: 10px auto; 
+    }
+}
