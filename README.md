@@ -1,77 +1,51 @@
-# 🌊 Guia de Enchentes – Landing Page da Solução
+# 🌊 Guia de Enchentes — Site Informativo
 
-## Projeto Acadêmico de Front-end Design para a disciplina de FrontEnd
-(Orientado pelo Prof. Caio Oliveira)
+Site estático com orientações sobre enchentes: áreas de risco, sinais de alerta, o que fazer antes, durante e depois, contatos de emergência e um quiz para testar o que a pessoa aprendeu.
 
----
-
-## 📌 Sobre o Projeto
-
-O "Guia de Enchentes" é um projeto acadêmico focado no desenvolvimento de uma Landing Page que atua como um guia informativo e interativo sobre riscos hidrológicos. Ele visa capacitar os usuários com informações precisas e em tempo real sobre riscos de enchente, aumentando a segurança da população e mitigando perdas materiais.
-
-O site simula uma solução tecnológica para problemas de enchentes, apresentando conteúdo de forma clara e impactante.
+Projeto da **Global Solution 2025 (FIAP)**, disciplina de Front-end Design, orientado pelo Prof. Caio Oliveira.
 
 ---
 
-## ⛈️ O Problema que a Solução Resolve (Mapeamento de Dores)
+## O problema
 
-Enchentes trazem problemas diretos e frustrantes para as pessoas, como ser pego de surpresa pela chuva intensa, não saber quais rotas de fuga são seguras ou onde encontrar abrigos. A falta de preparo e informação adequada resulta em insegurança, perdas financeiras e um grande impacto na qualidade de vida. O site busca resolver a dor de receber informações confusas ou incompletas, e de sofrer prejuízos materiais e emocionais que poderiam ser evitados com um guia preparado.
+Em enchentes, muita gente é pega de surpresa: não sabe se mora numa área de risco, não reconhece os sinais de que a água vai subir e não sabe o que fazer com documentos, energia elétrica e alimentos. A proposta do site é reunir essas orientações num lugar só, com linguagem simples.
 
----
+## O que o site tem
 
-## 🚀 Objetivo do Projeto
+| Página | Conteúdo |
+|---|---|
+| `index.html` | Apresentação do problema, da solução e dos benefícios, com galeria de fotos |
+| `areas_de_risco.html` | Locais mais vulneráveis e o que os torna perigosos |
+| `sinais_de_alerta.html` | Sinais ambientais e visuais de que o risco está aumentando |
+| `acoes_de_emergencia.html` | O que fazer antes, durante e depois de uma enchente |
+| `contatos_de_emergencia.html` | Telefones e serviços de emergência |
+| `quiz.html` | Quiz de 10 perguntas com pontuação no final |
 
-O principal objetivo é criar uma Landing Page completa que permita aplicar todo o conhecimento adquirido em Front-end Design. Especificamente, o projeto visa:
+## Como foi feito
 
-* **Criar um site responsivo e funcional**.
-* **Implementar um guia detalhado** sobre ações a serem tomadas antes, durante e depois de uma enchente.
-* **Apresentar informações sobre sinais ambientais ou visuais** que podem indicar risco crescente de enchente.
-* **Praticar habilidades de desenvolvimento** com HTML e CSS
-* **Utilizar versionamento de código** com GitHub.
+- **HTML** com uma página por tema e menu de navegação comum a todas
+- **CSS** em `style.css`, com layout responsivo (ajuste abaixo de 768px de largura)
+- **JavaScript** em `script.js`:
+  - menu hambúrguer no celular
+  - galeria de fotos com botões de anterior e próxima
+  - quiz que mostra uma pergunta por vez, marca a resposta certa e a errada, soma os acertos e permite recomeçar
 
----
+### Paleta de cores (regra 60-30-10)
 
-## 💡 Benefícios da Nossa Solução
+| Uso | Cor |
+|---|---|
+| Dominante (60%): fundo da página | `#E0F2F7` azul muito claro |
+| Secundária (30%): blocos de conteúdo | `#FFFFFF` branco |
+| Destaque (10%): links e subtítulos | `#FFA07A` salmão |
 
-Com este guia, os usuários terão:
+## Como rodar
 
-* Maior segurança através de alertas antecipados e informações claras.
-* Redução de perdas materiais e emocionais ao saber como agir.
-* Empoderamento da comunidade com informações confiáveis para tomada de decisão rápida.
-* Tranquilidade ao ter um recurso centralizado para planejamento, ação e recuperação pós-enchente.
+Não precisa de instalação: baixe o repositório e abra o `index.html` no navegador.
 
----
-
-## 🧠 Funcionalidades e Backlog
-
-O site oferece as seguintes funcionalidades principais:
-
-* **Identificação de Locais de Risco:** Exibir uma seção com a descrição dos principais locais de risco de enchente em áreas relevantes, incluindo características que os tornam vulneráveis.
-* **Sinais de Alerta de Enchente:** Fornecer informações sobre os sinais ambientais ou visuais que podem indicar um risco crescente de enchente.
-* **Guias de Ação Completos:** Dispor de um guia detalhado sobre as ações a serem tomadas antes, durante e depois de uma enchente (ex: kit de emergência, proteção de bens, como agir com segurança, recuperação).
-* **Layout simples, intuitivo e responsivo**.
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-* **FrontEnd:** HTML, CSS.
-* **CSS:** Para toda a estilização, incluindo layout, tipografia, cores e responsividade.
+```bash
+git clone https://github.com/Neres73/gs-front-end.git
+```
 
 ---
 
-## 🎨 Paleta de Cores (Regra 60-30-10 em UI Design)
-
-A estilização deste modelo adota a Regra 60-30-10 de design de cores para garantir um equilíbrio visual e um design limpo e agradável:
-
-### Cor Dominante (60%)
--   **`#E0F2F7` (Azul muito claro)**
-    * Utilizado predominantemente no fundo da página e elementos gerais, estabelecendo o tom geral e a sensação de segurança/calma.
-
-### Cor Secundária (30%)
--   **`#FFFFFF` (Branco puro)**
-    * Aplicado nos blocos de conteúdo principais (seções), proporcionando contraste e clareza para o texto e as informações.
-
-### Cor de Destaque (10%)
--   **`#FFA07A` (Laranja claro/Salmão)**
-    * Reservado para elementos interativos ou que precisam de destaque, como links de navegação e subtítulos importantes, chamando a atenção do usuário para ações ou informações-chave.
+Projeto acadêmico, desenvolvido por [Gustavo Neres](https://github.com/Neres73).
