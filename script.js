@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (hamburger && navLinks) {
         hamburger.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
+            const aberto = navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', aberto);
+            hamburger.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
         });
     }
 
@@ -157,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function startQuiz() {
         currentQuestionIndex = 0;
         score = 0;
-        nextButton.innerHTML = "Próxima";
+        nextButton.textContent = "Próxima";
         quizArea.style.display = 'block';
         finalScoreArea.style.display = 'none';
         showQuestion();
@@ -167,11 +169,11 @@ document.addEventListener('DOMContentLoaded', function() {
         resetState();
         let currentQuestion = questions[currentQuestionIndex];
         let questionNo = currentQuestionIndex + 1;
-        questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+        questionElement.textContent = questionNo + ". " + currentQuestion.question;
 
         currentQuestion.answers.forEach(answer => {
             const button = document.createElement("button");
-            button.innerHTML = answer.text;
+            button.textContent = answer.text;
             button.classList.add("btn");
             if (answer.correct) {
                 button.dataset.correct = answer.correct;
@@ -189,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function selectAnswer(e) {
-        const selectedBtn = e.target;
+        const selectedBtn = e.currentTarget;
         const isCorrect = selectedBtn.dataset.correct === "true";
         if (isCorrect) {
             selectedBtn.classList.add("correct");
@@ -220,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showScore() {
         quizArea.style.display = 'none';
         finalScoreArea.style.display = 'block';
-        scoreTextElement.innerHTML = `Você acertou ${score} de ${questions.length} perguntas!`;
+        scoreTextElement.textContent = `Você acertou ${score} de ${questions.length} perguntas!`;
     }
 
     if (nextButton) {
@@ -248,10 +250,43 @@ document.addEventListener('DOMContentLoaded', function() {
     const colorChangerButtons = document.querySelectorAll('.color-changer-btn');
     const body = document.body;
 
+    // A cor escolhida fica salva e é aplicada em todas as páginas do site
+    function lerCorSalva() {
+        try { return localStorage.getItem('corFundo'); } catch (e) { return null; }
+    }
+    function salvarCor(cor) {
+        try { localStorage.setItem('corFundo', cor); } catch (e) { /* navegador sem armazenamento: só não lembra */ }
+    }
+
+    const corSalva = lerCorSalva();
+    if (corSalva) {
+        body.style.backgroundColor = corSalva;
+    }
+
     colorChangerButtons.forEach(button => {
         button.addEventListener('click', () => {
             const color = button.dataset.color;
             body.style.backgroundColor = color;
+            salvarCor(color);
         });
     });
+
+
+    // Formulário de contato: o site é estático (sem servidor), então a mensagem
+    // não é enviada de verdade. Valida os campos e mostra a confirmação na tela,
+    // em vez de tentar um POST que termina numa página de erro.
+    const formContato = document.getElementById('form-contato');
+    const retornoForm = document.getElementById('form-retorno');
+    if (formContato && retornoForm) {
+        formContato.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            if (!formContato.checkValidity()) {
+                formContato.reportValidity();
+                return;
+            }
+            const nome = formContato.elements['nome'].value.trim().split(' ')[0];
+            retornoForm.textContent = `Obrigado, ${nome}! Recebemos sua mensagem.`;
+            formContato.reset();
+        });
+    }
 });

@@ -14,7 +14,7 @@ Em enchentes, muita gente é pega de surpresa: não sabe se mora numa área de r
 
 | Página | Conteúdo |
 |---|---|
-| `index.html` | Apresentação do problema, da solução e dos benefícios, com galeria de fotos |
+| `index.html` | Apresentação do problema, da solução e dos benefícios, galeria de fotos e formulário de contato |
 | `areas_de_risco.html` | Locais mais vulneráveis e o que os torna perigosos |
 | `sinais_de_alerta.html` | Sinais ambientais e visuais de que o risco está aumentando |
 | `acoes_de_emergencia.html` | O que fazer antes, durante e depois de uma enchente |
@@ -27,7 +27,9 @@ Em enchentes, muita gente é pega de surpresa: não sabe se mora numa área de r
 - **CSS** em `style.css`, com layout responsivo (ajuste abaixo de 768px de largura)
 - **JavaScript** em `script.js`:
   - menu hambúrguer no celular
+  - botões para trocar a cor de fundo, com a escolha mantida em todas as páginas
   - galeria de fotos com botões de anterior e próxima
+  - formulário de contato com validação dos campos (o site é estático, então a mensagem não é enviada a um servidor: a confirmação aparece na própria página)
   - quiz que mostra uma pergunta por vez, marca a resposta certa e a errada, soma os acertos e permite recomeçar
 
 ### Paleta de cores (regra 60-30-10)
